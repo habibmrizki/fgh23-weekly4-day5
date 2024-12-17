@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      /* Style form container */
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 300px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+      }
+
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 8px 12px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+
+      /* Loader styles */
+      .loader {
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #ffffff;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="searchBook(event)">
+      <label for="search">Pencarian Buku</label>
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="Masukkan Judul Buku"
+      />
+      <button type="submit">
+        <p>Search</p>
+        <div class="loader hidden"></div>
+      </button>
+    </form>
+    <form onsubmit="createList(event)">
+      <label for="listname">List name</label>
+      <input type="text" name="listname" id="listname" />
+      <label for="description">deksripsi</label>
+      <input type="text" name="description" id="description" />
+      <button type="submit">
+        <p>create list</p>
+        <div class="loader hidden"></div>
+      </button>
+    </form>
+    <script src="fecth.js"></script>
+  </body>
+</html>

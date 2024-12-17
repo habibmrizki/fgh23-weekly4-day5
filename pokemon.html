@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    input[type="text0"] {
+      padding: 5px;
+    }
+  </style>
+  <body>
+    <main class="container">
+      <div class="list-control">
+        <label for="page">Page</label>
+        <input type="text" name="page" id="page" />
+        <label for="limit">Limit</label>
+        <input type="text" name="limit" id="limit" />
+        <button type="button">get pokemon</button>
+      </div>
+      <div class="pokemon">
+        <ol></ol>
+        <div class="loader hidden"></div>
+      </div>
+    </main>
+    <script src="pokemon.js"></script>
+  </body>
+</html>
